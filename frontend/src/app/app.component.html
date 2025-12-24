@@ -8,7 +8,8 @@
       <input
         type="text"
         id="title"
-        [(ngModel)]="newTask.title"
+        [value]="newTask.title"
+        (input)="newTask.title = $any($event.target).value"
         placeholder="Enter task title"
         (keyup.enter)="createTask()"
       />
@@ -17,7 +18,8 @@
       <label for="description">Description</label>
       <textarea
         id="description"
-        [(ngModel)]="newTask.description"
+        [value]="newTask.description || ''"
+        (input)="newTask.description = $any($event.target).value"
         placeholder="Enter task description (optional)"
       ></textarea>
     </div>
@@ -61,13 +63,17 @@
           <label>Title</label>
           <input
             type="text"
-            [(ngModel)]="editingTask.title"
+            [value]="editingTask.title"
+            (input)="editingTask.title = $any($event.target).value"
             (keyup.enter)="saveEdit()"
           />
         </div>
         <div class="form-group">
           <label>Description</label>
-          <textarea [(ngModel)]="editingTask.description"></textarea>
+          <textarea
+            [value]="editingTask.description || ''"
+            (input)="editingTask.description = $any($event.target).value"
+          ></textarea>
         </div>
         <div class="task-actions">
           <button class="btn btn-success" (click)="saveEdit()">Save</button>
