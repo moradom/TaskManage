@@ -63,16 +63,16 @@
           <label>Title</label>
           <input
             type="text"
-            [value]="editingTask.title"
-            (input)="editingTask.title = $any($event.target).value"
+            [value]="editingTask!.title"
+            (input)="updateEditingTitle($any($event.target).value)"
             (keyup.enter)="saveEdit()"
           />
         </div>
         <div class="form-group">
           <label>Description</label>
           <textarea
-            [value]="editingTask.description || ''"
-            (input)="editingTask.description = $any($event.target).value"
+            [value]="editingTask!.description || ''"
+            (input)="updateEditingDescription($any($event.target).value)"
           ></textarea>
         </div>
         <div class="task-actions">

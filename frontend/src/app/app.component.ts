@@ -76,6 +76,18 @@ export class AppComponent implements OnInit {
     this.editingTask = { ...task };
   }
 
+  updateEditingTitle(value: string): void {
+    if (this.editingTask) {
+      this.editingTask.title = value;
+    }
+  }
+
+  updateEditingDescription(value: string): void {
+    if (this.editingTask) {
+      this.editingTask.description = value;
+    }
+  }
+
   cancelEdit(): void {
     this.editingTask = null;
   }
