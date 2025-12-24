@@ -7,9 +7,9 @@ import { Task } from './task.model';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
-  template: '<div class="container"><h1>Task Manager - Testing Build</h1></div>',
-  styles: []
+  imports: [CommonModule, FormsModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
   private taskService = inject(TaskService);
