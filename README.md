@@ -19,6 +19,20 @@ A full-stack task management application built with Angular, Python FastAPI, and
 - **Containerization**: Docker
 - **CI/CD**: GitHub Actions
 
+## 🚀 Quick Start with GitHub Codespaces
+
+**Want to try the app immediately without installing anything?**
+
+1. Click the green **"Code"** button on GitHub
+2. Select **"Codespaces"** tab
+3. Click **"Create codespace"**
+4. Run: `docker-compose up -d`
+5. Open Port 80 from the PORTS tab
+
+The app will be running in 2 minutes! See [CODESPACES.md](CODESPACES.md) for detailed instructions.
+
+> **Note**: Codespaces is perfect for testing and development, but use Railway/Render/VPS for production deployment.
+
 ## Project Structure
 
 ```
